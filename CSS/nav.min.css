@@ -1,0 +1,175 @@
+nav {
+    height: 55px;
+    line-height: 55px;
+    z-index: 10;
+    font-family: "Roboto",sans-serif;
+}
+
+nav li a,nav li span {
+    font-size: 1.15rem !important;
+    font-weight: 500;
+    padding: 0 20px;
+    color: #fff
+}
+
+nav .dropdown-content {
+    box-shadow: none
+}
+
+nav .dropdown-content li {
+    min-height: 42px
+}
+
+nav .dropdown-content li a {
+    line-height: 22px;
+    padding: 10px 16px
+}
+
+nav .dropdown-content li a {
+    padding-right: 20px
+}
+
+nav .dropdown-content li>a,nav .dropdown-content li>span {
+    color: white;
+    padding-left: 20px;
+    background-color: #07a6c3
+}
+
+nav .dropdown-content li>a:hover {
+    background-color: #7ae8f6
+}
+
+nav i.fa-bars {
+    text-shadow: 0
+}
+
+nav ul a:hover {
+    background-color: #94B9FF
+}
+
+footer {
+    /* margin-top: 1rem; */
+    padding-top: 1rem
+}
+
+footer,footer a {
+    background-color: #94b9ff;
+    color: #2D00AD;
+    font-size: .9rem
+}
+
+.footer-about {
+    display: inline-block;
+    max-width: 450px
+}
+
+footer h5 {
+    font-weight: bold;
+    font-size: 1.1rem;
+    color: #FFFFFF;
+    margin: .1rem 0
+}
+
+.footer-logo {
+    display: inline-block;
+    width: 250px;
+    padding: 0 10px;
+    vertical-align: top
+}
+
+.footer-logo ul {
+    margin: 0
+}
+
+.footer-contact {
+    display: inline-block;
+    width: 430px;
+    vertical-align: top;
+    max-width: 100%
+}
+
+.contact-col {
+    display: inline-block;
+    width: 25%;
+    vertical-align: top
+}
+
+.footer-contact .contact-col:last-child {
+    width: 47%
+}
+
+.contact-col ul {
+    margin: 0
+}
+
+.footer-copyright {
+    margin: 2rem 0 1rem 0;
+    text-align: center
+}
+
+.user-icon {
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    vertical-align: middle;
+    border: 0 none
+}
+
+input[type=text]:focus:not([readonly]),textarea.materialize-textarea:focus:not([readonly]) {
+    box-shadow: none
+}
+
+input[type=text].valid,input[type=text]:focus.valid,textarea.materialize-textarea.valid,textarea.materialize-textarea:focus.valid {
+    border-bottom: 1px solid #9e9e9e;
+    box-shadow: 0
+}
+
+.unselectable {
+    -moz-user-select: -moz-none;
+    -khtml-user-select: none;
+    -webkit-user-select: none;
+    -o-user-select: none;
+    -ms-user-select: none;
+    user-select: none
+}
+
+.text-bottom {
+    vertical-align: text-bottom
+}
+
+.side-nav {
+    background-color: #07a6c3;
+    color: #fff;
+    font-family: "Roboto",sans-serif
+}
+
+.side-nav a {
+    color: #fff
+}
+
+.side-nav li,.side-nav a {
+    height: 48px;
+    line-height: 48px;
+    font-weight: bold
+}
+
+.side-nav .dropdown-content li>a {
+    color: white
+}
+
+@media only screen and (max-width: 600px) {
+    nav li a,nav li span {
+        font-size:14px !important
+    }
+
+    footer,footer a {
+        font-size: .8rem
+    }
+
+    .footer-logo {
+        display: block;
+        padding: 0;
+        margin: 1rem 0
+    }
+}

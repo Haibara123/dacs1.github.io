@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link href="fonts.googleapis.com/iconfamily=Material+Icons" rel="stylesheet">
+    <link href="CSS/materialize-wiki.min.css" type="text/css" rel="stylesheet"
+          media="screen,projection"/>
+    <link href="font-awesome-4.7.0/css/font-awesome.min.css" type="text/css" rel="stylesheet"
+          media="screen,projection"/>
+    <link href="CSS/animate.min.css" type="text/css" rel="stylesheet"
+          media="screen,projection"/>
+    <link href="CSS/jquery.mCustomScrollbar.min.css" type="text/css" rel="stylesheet"
+          media="screen,projection"/>
+    <link href="CSS/perfect-scrollbar.min.css" type="text/css" rel="stylesheet"
+          media="screen,projection"/>
+    <link href="CSS/nav.min.css" type="text/css" rel="stylesheet"
+          media="screen,projection"/>
+    <link href="CSS/base-0.1.0.min.css" type="text/css" rel="stylesheet"
+          media="screen,projection"/>
+
+    <!-- <script async="" src="JS/analytics.js"></script> -->
+    <!-- <script src="JS/jquery-2.2.4.min.js"></script> -->
+   
+    <script>
+        adType = 1;
+    </script>
+    <title>Đăng ký</title>
+
+    <link href="CSS/home-0.0.9.min.css" type="text/css" rel="stylesheet" media="screen,projection">
+    <style>
+        .text-blink-animation {
+            animation-duration: 1000ms;
+            animation-name: blink-animation;
+            animation-iteration-count: infinite;
+            animation-direction: alternate;
+            /* -webkit-animation: blink-animation 1000ms infinite; */
+        }
+
+        @keyframes blink-animation {
+            from {
+                color: blue;
+            }
+
+            to {
+                color: red;
+            }
+        }
+
+        @-webkit-keyframes blink-animation {
+            from {
+                color: blue;
+            }
+
+            to {
+                color: red;
+            }
+        }
+
+        .container-main {
+        max-width: 800px;
+        margin: 0 auto;
+        text-align: center;
+        }
+
+        @media screen and (max-width: 768px) {
+        .container-main {
+            max-width: 100%;
+            padding: 0 20px;
+        }
+        }
+
+        h1 {
+        color: #333;
+        font-weight: bold;
+        font-size: 36px;
+        margin-bottom: 20px;
+        display: inline-block;
+        position: relative;
+        text-align: center;
+        }
+
+        @media screen and (max-width: 768px) {
+        h1 {
+            font-size: 24px;
+        }
+        }
+
+        iframe {
+        width: 100%;
+        height: 400px;
+        margin-bottom: 40px;
+        }
+
+        @media screen and (max-width: 768px) {
+        iframe {
+            height: 200px;
+        }
+        }
+
+        .team {
+        margin-bottom: 20px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        }
+
+        .member {
+        display: inline-block;
+        margin: 10px;
+        position: relative;
+        cursor: pointer;
+        flex: 0 0 calc(33.33% - 20px);
+        max-width: calc(33.33% - 20px);
+        }
+
+        @media screen and (max-width: 768px) {
+        .member {
+            flex: 0 0 calc(50% - 20px);
+            max-width: calc(50% - 20px);
+        }
+        }
+
+        .member img {
+        width: 100%;
+        height: auto;
+        margin-bottom: 10px;
+        }
+
+        .member:hover img {
+        transform: scale(1.1);
+        }
+
+        .member .name {
+        margin-bottom: 20px;
+        }
+
+        .follow {
+        margin-bottom: 40px;
+        }
+
+        .social-link {
+        display: inline-block;
+        background-color: #007bff;
+        color: #fff;
+        padding: 10px 20px;
+        border-radius: 5px;
+        margin: 10px;
+        font-weight: bold;
+        text-transform: uppercase;
+        text-decoration: none;
+        transition: all 0.2s ease-in-out;
+        }
+
+        .social-link:hover {
+        background-color: #0069d9;
+        }
+    </style>
+    <!-- <script src="JS/jquery.mousewheel.min.js"></script> -->
+</head>
+
+<body>
+   <nav role="navigation">
+    <div class="nav-wrapper">
+        <ul class="hide-on-small-med-down">
+
+            <li><a href="index.html" style="height: 55px; padding-left: 0.5rem"><img src="img/logo.png" height="55px" style="vertical-align: middle;margin-bottom: 4px"></a></li>
+        
+            <li class="right"><a href="dangki.html">Đăng ký</a></li>
+            <li class="right"><a href="dangnhap.html">Đăng nhập</a></li>
+
+        </ul>
+
+        <ul class="hide-on-large-med-only">
+            <li><a href="index.html"style="height: 55px; padding-left: 0.5rem"><img src="img/logo.png" height="55px" style="vertical-align: middle;margin-bottom: 4px"></a></li>
+            
+                <li class="right"><a href="dangnhap.html" data-action="login">Đăng nhập</a></li>
+            
+        </ul>
+
+    </div>
+</nav>
+<main>
+    <div class="container-main">
+		<h1>Liên hệ</h1>
+		<hr>
+		<br>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15343.007782460872!2d108.2426005!3d15.9743252!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3142108997dc971f%3A0x1295cb3d313469c9!2zVHLGsOG7nW5nIMSQ4bqhaSBo4buNYyBDw7RuZyBuZ2jhu4cgVGjDtG5nIHRpbiB2w6AgVHJ1eeG7gW4gdGjDtG5nIFZp4buHdCAtIEjDoG4!5e0!3m2!1svi!2s!4v1686813718637!5m2!1svi!2s" frameborder="0" style="border:0" allowfullscreen></iframe>
+        
+        <hr>
+        <div class="team">
+			<h1>Thành viên nhóm</h1>
+		</div>
+
+		<div class="members">
+			<div class="member">
+				<hr href="https://www.facebook.com/bao.tam.50702/"><img src="img/member1.jpg" alt="Member 1"></a>
+				<div class="name">Trần Thị Hường</div>
+			</div>
+			<div class="member">
+				<a href="https://www.facebook.com/profile.php?id=100027479978392"><img src="img/member2.jpg" alt="Member 2"></a>
+				<div class="name">Nguyễn Thị Thùy Quyên</div>
+			</div>
+		</div>
+
+        <hr>
+		<div class="follow">
+			<h1>Theo dõi chúng tôi</h1>
+			<div class="social-links">
+				<a href="https://www.facebook.com/bao.tam.50702/" class="social-link">Facebook</a>
+				<a href="https://www.instagram.com/" class="social-link">Instagram</a>
+			</div>
+		</div>
+	</div>
+</main>
+
+<footer>
+    <div class="container">
+        <div class="footer-about">
+            <h5>Giới thiệu</h5>
+            Novels HQ là trang web đọc truyện miễn phí, người dùng có thể truy cập dễ dàng . Với giao diện đơn giản , thân thiện và tự động hóa , Novels HQ cung cấp những trải nghiệm tiên tiến nhất mang lại cho người dùng những trải nghiệm tốt nhất có thể.
+           
+        </div>
+       
+        <div class="footer-contact">
+            <div class="contact-col">
+                <h5>Liên kết</h5>
+                <ul>
+                    <li><a href="index.html">Trang chủ</a></li>
+
+                    <li><a href="dangki.html">Đăng ký</a></li>
+
+                    <li><a href="dangnhap.html">Đăng nhập</a></li>
+                </ul>
+            </div>
+            <div class="contact-col">
+                <h5>Trợ giúp</h5>
+                <ul>
+                    <li><a href="#">Báo lỗi</a></li>
+                    <li><a href="#">Bảo mật</a></li>
+                    <li><a href="#">Điều lệ</a></li>
+                    <li><a href="#">Liên hệ</a></li>
+                </ul>
+            </div>
+            <div class="contact-col">
+                <h5>Liên hệ</h5>
+                <ul>
+                    <li><a href="mailto:quyenntt.22itb@gmail.com">quyenntt.22itb@vku.udn.vn </a></li>
+                    <li><a href="mailto:huongtt.22itb@gmail.com">huongtt.22itb@vku.udn.vn </a></li>
+
+                </ul>
+            </div>
+        </div>
+        <div class="footer-copyright">
+            Copyright © 2023-2030 Novels HQ. All rights reserved.
+        </div>
+
+    </div>
+</footer>
+</body>
+</html>

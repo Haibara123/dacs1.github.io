@@ -1,0 +1,49 @@
+#txtSearch {
+    width: 200px;
+    height: 32px;
+    border-radius: 5px;
+    border: 1px solid #bbb !important;
+    font-size: 1rem;
+    vertical-align: top;
+    padding: 0 .5rem !important;
+    box-sizing: border-box !important;
+    color: #333
+}
+
+#btnSearch,#btnSearch i {
+    color: #27c6da;
+    font-size: 32px;
+    vertical-align: top;
+    padding: 0;
+    line-height: 32px;
+    height: 32px
+}
+
+#formQuickSearch {
+    line-height: 32px
+}
+
+#formQuickSearch input {
+    margin-bottom: 0 !important;
+    background-color: #fff !important
+}
+
+#formQuickSearch input:focus:not([readonly]) {
+    box-shadow: none !important
+}
+
+#formQuickSearch ::-webkit-input-placeholder {
+    color: #bbb
+}
+
+#formQuickSearch :-moz-placeholder {
+    color: #bbb
+}
+
+#formQuickSearch ::-moz-placeholder {
+    color: #bbb
+}
+
+#formQuickSearch :-ms-input-placeholder {
+    color: #bbb
+}

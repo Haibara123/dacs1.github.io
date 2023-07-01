@@ -1,0 +1,124 @@
+#mdAddName {
+    width: 350px;
+    color: #444;
+    max-width: 90%
+}
+
+#mdAddName label {
+    width: 70px;
+    text-align: right;
+    clear: both;
+    font-size: 1rem;
+    display: inline-block;
+    line-height: 3rem;
+    height: 3rem;
+    margin: 0 15px 15px 0;
+    color: #444
+}
+
+#mdAddName input {
+    display: inline-block;
+    width: calc(100% - 100px);
+    border: 1px solid #9e9e9e;
+    padding-left: .7rem;
+    padding-right: .7rem;
+    -webkit-box-sizing: border-box !important;
+    -moz-box-sizing: border-box !important;
+    box-sizing: border-box !important;
+    color: #444
+}
+
+#mdAddName button {
+    text-transform: none
+}
+
+#mdAddName input[type=text]:focus:not([readonly]) {
+    box-shadow: none
+}
+
+#mdAddName input[readonly] {
+    background-color: #bbebf4 !important
+}
+
+#mdAddName input[type=text].valid {
+    box-shadow: 0
+}
+
+#mdAddName .btn {
+    padding: 0 1rem
+}
+
+#mdDelNameConfirm {
+    width: 350px
+}
+
+#mdAddName .btn:hover,#mdDelNameConfirm .btn:hover {
+    background-color: #8eedf9
+}
+
+#mdSuggestName {
+    width: 450px;
+    color: #444;
+    max-width: 90%
+}
+
+#mdSuggestName li:hover {
+    background-color: #7ae8f6;
+    cursor: pointer
+}
+
+/*!*max-height: calc(60vh);*!*/
+.modal-header .modal-top-right-corner {
+    position: absolute;
+    right: 10px;
+    top: 10px
+}
+
+.modal.modal-fixed-header {
+    padding: 0;
+    height: 70%
+}
+
+.modal.modal-fixed-header .modal-header {
+    border-bottom: 1px solid rgba(0,0,0,0.1);
+    position: absolute;
+    top: 0
+}
+
+.modal .modal-header {
+    border-radius: 0 0 2px 2px;
+    background-color: #fafafa;
+    padding: 4px 24px;
+    height: 56px;
+    width: 100%
+}
+
+.modal.modal-fixed-header .modal-content {
+    position: absolute;
+    top: 56px;
+    height: calc(100% - 56px);
+    max-height: 100%;
+    width: 100%;
+    overflow-y: auto;
+    padding-top: 0
+}
+
+.modal.modal-header-float .modal-header {
+    border-bottom: 0;
+    height: 32px;
+    padding: 0
+}
+
+.modal.modal-header-float .modal-content {
+    padding-top: 24px
+}
+
+ul.suggest-name-list li {
+    margin: .7rem 0
+}
+
+ul.suggest-name-list li.line {
+    width: 50%;
+    margin: 1rem 0;
+    border-bottom: dashed 1px
+}

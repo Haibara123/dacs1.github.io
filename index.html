@@ -1,0 +1,1394 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!--     <link rel="shortcut icon" href="/static/img/favicon.ico"> -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="CSS/materialize-wiki.min.css" type="text/css" rel="stylesheet"
+          media="screen,projection"/>
+    <link href="font-awesome-4.7.0/css/font-awesome.min.css" type="text/css" rel="stylesheet"
+          media="screen,projection"/>
+    <link href="CSS/animate.min.css" type="text/css" rel="stylesheet"
+          media="screen,projection"/>
+    <link href="CSS/jquery.mCustomScrollbar.min.css" type="text/css" rel="stylesheet"
+          media="screen,projection"/>
+    <link href="CSS/perfect-scrollbar.min.css" type="text/css" rel="stylesheet"
+          media="screen,projection"/>
+    <link href="CSS/nav.min.css" type="text/css" rel="stylesheet"
+          media="screen,projection"/>
+    <link href="CSS/base-0.1.0.min.css" type="text/css" rel="stylesheet"
+          media="screen,projection"/>
+
+    <script async="" src="https://www.google-analytics.com/analytics.js"></script>
+    <script src="JS/jquery-2.2.4.min.js"></script>
+    <script>
+        adType = 1;
+    </script>
+    <title>Đọc Truyện Online </title>
+
+    <link href="CSS/home-0.0.9.min.css" type="text/css" rel="stylesheet" media="screen,projection">
+    <style>
+        .text-blink-animation {
+            animation-duration: 1000ms;
+            animation-name: blink-animation;
+            animation-iteration-count: infinite;
+            animation-direction: alternate;
+            /* -webkit-animation: blink-animation 1000ms infinite; */
+        }
+
+        @keyframes blink-animation {
+            from {
+                color: blue;
+            }
+
+            to {
+                color: red;
+            }
+        }
+
+        @-webkit-keyframes blink-animation {
+            from {
+                color: blue;
+            }
+
+            to {
+                color: red;
+            }
+        }
+    </style>
+    <script src="JS/jquery.mousewheel.min.js"></script>
+</head>
+
+<body>
+   <nav role="navigation">
+    <div class="nav-wrapper">
+        <ul class="hide-on-small-med-down">
+
+                     <li><a href="index.html" style="height: 55px; padding-left: 0.5rem"><img src="img/logo.png" height="55px" style="vertical-align: middle;margin-bottom: 4px"></a></li>
+        
+            <li class="right"><a href="dangki.html">Đăng ký</a></li>
+            <li class="right"><a href="dangnhap.html">Đăng nhập</a></li>
+        
+        </ul>
+
+        <ul class="hide-on-large-med-only">
+            <li><a href="/"style="height: 55px; padding-left: 0.5rem"><img src="logo.png" height="55px" style="vertical-align: middle;margin-bottom: 4px"></a></li>
+            
+                <li class="right"><a href="dangnhap.html" data-action="login">Đăng nhập</a></li>
+            
+        </ul>
+
+    </div>
+</nav>
+
+    <!-- <ul id="nav-mobile" class="side-nav">
+        <li><a href="index.html">Trang chủ</a></li>
+        <li><a href="/chuong-moi">Chương mới</a></li>
+        
+
+    </ul> -->
+    <main>
+        <div class="container">
+
+            <div class="quick-search-box">
+                <link href="CSS/quick-search.min.css" type="text/css" rel="stylesheet"
+                    media="screen,projection">
+
+                <form id="formQuickSearch" action="/tim-kiem">
+                    <input id="txtSearch" name="q" type="text" placeholder="Tên truyện hoặc tên tác giả" value=""
+                        required="">
+                    <input type="hidden" name="qs" value="1">
+                    <button class="btn-flat" id="btnSearch" type="submit"><i class="material-icons">search</i></button>
+                </form>
+            </div>
+            <div class="category" style="display: flex">
+                <div class="cyan z-depth-1 white-text btn-scroll btn-left" href="#!"><i class="material-icons">keyboard_arrow_left</i></div>
+                <div class="tag-tabs cyan z-depth-1 dragscroll tooltipped" data-position="bottom" data-delay="50"
+                    data-tooltip="Nắm kéo để scroll" data-tooltip-id="8cda160c-ea00-71ea-5677-b9ec8a7c5be1">
+
+                    <div class="tag-tab"><a href="the-loai/doanvan.html" class="white-text">
+
+                            Đoản văn
+
+                        </a></div>
+
+                    <div class="tag-tab"><a href="the-loai/ngontinh.html" class="white-text">
+
+                           Ngôn tình 
+
+                        </a></div>
+
+                    <div class="tag-tab"><a href="#" class="white-text">
+
+                            Đam mỹ
+
+                        </a></div>
+
+                    <div class="tag-tab"><a href="#" class="white-text">
+
+                            Cổ đại
+
+                        </a></div>
+
+                    <div class="tag-tab"><a
+                            href="#"
+                            class="white-text">
+
+                           Hiện đại
+
+                        </a></div>
+
+                    <div class="tag-tab"><a href="#" class="white-text">
+
+                            Tương lai
+
+                        </a></div>
+
+                    <div class="tag-tab"><a href="#" class="white-text">
+
+                            Trinh thám
+
+                        </a></div>
+
+                    <div class="tag-tab"><a href="#" class="white-text">
+
+                            Ma pháp
+
+                        </a></div>
+
+                    <div class="tag-tab"><a href="#" class="white-text">
+
+                            Võ hiệp
+
+                        </a></div>
+
+                    <div class="tag-tab"><a
+                            href="#"
+                            class="white-text">
+
+                            Tiên hiệp
+
+                        </a></div>
+
+
+                </div>
+                <div class="cyan z-depth-1 white-text btn-scroll btn-right" href="#!"><i
+                        class="material-icons">keyboard_arrow_right</i></div>
+            </div>
+            <div class="line"></div>
+            <div class="category">Vừa được review</div>
+            <div class="view-all">
+                <a href="#">Xem tất cả 
+                <i class="fa fa-angle-double-right" aria-hidden="true"></i>
+            </a>
+        </div>
+            <div class="book-list">
+
+
+
+
+                <div class="book-item">
+                    <div class="cover-col">
+                        <a class="cover-wrapper z-depth-1 hoverable" href="xuyen-thu-sai-cam-nu-chu-ca-man/xuyen-thu.html">
+
+                            <img class="" src="img/h1.jpeg"
+                                onerror="javascript:this.src='/static/img/default-cover.jpg'">
+
+                        </a>
+                    </div>
+                    <div class="info-col">
+                        <a class="tooltipped" data-position="bottom" data-delay="50"
+                            data-tooltip="Xuyên thư: Sai cầm nữ chủ kịch bản cá mặn"
+                            href="xuyen-thu-sai-cam-nu-chu-ca-man/xuyen-thu.html"
+                            data-tooltip-id="95ba88a1-2c7e-1679-61ad-8eeac3ac7f82">
+                            <h5 class="book-title truncate">Xuyên thư: Sai cầm nữ chủ kịch bản cá mặn</h5>
+                        </a>
+                        <p class="book-author"><a class="truncate"
+                                href="xuyen-thu-sai-cam-nu-chu-ca-man/tac-gia.html">Tú Mộc Thành Lâm</a></p>
+                        <p class="book-publisher"><a class="truncate" href="#">Reine Dunkeln</a></p>
+                        <p class="book-gender">Ngôn tình</p>
+                        <p class="book-publisher"><a class="truncate"
+                                href="#">Còn tiếp</a></p>
+                        <p class="book-stats-box">
+                            <span class="book-stats"><i class="material-icons">visibility</i><span
+                                    data-ready="abbrNum">98k</span></span>
+                            <span class="book-stats"><i class="material-icons">star</i><span
+                                    data-ready="abbrNum">779</span></span>
+                            <span class="book-stats"><i class="fa fa-comment" aria-hidden="true"></i><span
+                                    data-ready="abbrNum">109</span></span>
+                        </p>
+                    </div>
+                </div>
+
+
+
+
+                <div class="book-item">
+                    <div class="cover-col">
+                        <a class="cover-wrapper z-depth-1 hoverable" href="tieu-thai-giam/gioi-thieu.html">
+
+                            <img class="" src="img/h2.jpeg"
+                                onerror="javascript:this.src='/static/img/default-cover.jpg'">
+
+                        </a>
+                    </div>
+                    <div class="info-col">
+                        <a class="tooltipped" data-position="bottom" data-delay="50" data-tooltip="Tiểu thái giám"
+                            href="tieu-thai-giam/gioi-thieu.html"
+                            data-tooltip-id="b0ecce51-10a1-2b45-c71c-f78b28b0a41b">
+                            <h5 class="book-title truncate">Tiểu thái giám</h5>
+                        </a>
+                        <p class="book-author"><a class="truncate" href="tieu-thai-giam/tac-gia.html">Sắt Nhận</a></p>
+                        <p class="book-publisher"><a class="truncate" href="#">athanh</a></p>
+                        <p class="book-gender">Ngôn tình</p>
+                        <p class="book-publisher"><a class="truncate"
+                                href="#">Hoàn thành</a></p>
+                        <p class="book-stats-box">
+                            <span class="book-stats"><i class="material-icons">visibility</i><span
+                                    data-ready="abbrNum">4.4k</span></span>
+                            <span class="book-stats"><i class="material-icons">star</i><span
+                                    data-ready="abbrNum">22</span></span>
+                            <span class="book-stats"><i class="fa fa-comment" aria-hidden="true"></i><span
+                                    data-ready="abbrNum">9</span></span>
+                        </p>
+                    </div>
+                </div>
+
+
+
+
+                <div class="book-item">
+                    <div class="cover-col">
+                        <a class="cover-wrapper z-depth-1 hoverable"
+                            href="../lui-vong-sau-dua-khai-cua-hang-toan-vong/gioi-thieu.html">
+
+                            <img class="" src="img/h3.jpeg"
+                                onerror="javascript:this.src='/static/img/default-cover.jpg'">
+
+                        </a>
+                    </div>
+                    <div class="info-col">
+                        <a class="tooltipped" data-position="bottom" data-delay="50"
+                            data-tooltip="Lui vòng sau dựa khai cửa hàng toàn võng bạo hỏa"
+                            href="../lui-vong-sau-dua-khai-cua-hang-toan-vong/gioi-thieu.html"
+                            data-tooltip-id="1354f20a-f97b-4fdd-c778-4b9eb74aa7b1">
+                            <h5 class="book-title truncate">Lui vòng sau dựa khai cửa hàng toàn võng bạo hỏa</h5>
+                        </a>
+                        <p class="book-author"><a class="truncate" href="../lui-vong-sau-dua-khai-cua-hang-toan-vong/tac-gia.html">Lăng Độ</a></p>
+                        <p class="book-publisher"><a class="truncate" href="#">ᴋᴀʀᴜᴛᴀ</a></p>
+                        <p class="book-gender">Ngôn tình</p>
+                        <p class="book-publisher"><a class="truncate"
+                                href="#">Hoàn thành</a></p>
+                        <p class="book-stats-box">
+                            <span class="book-stats"><i class="material-icons">visibility</i><span
+                                    data-ready="abbrNum">14k</span></span>
+                            <span class="book-stats"><i class="material-icons">star</i><span
+                                    data-ready="abbrNum">65</span></span>
+                            <span class="book-stats"><i class="fa fa-comment" aria-hidden="true"></i><span
+                                    data-ready="abbrNum">1</span></span>
+                        </p>
+                    </div>
+                </div>
+
+
+
+
+                <div class="book-item">
+                    <div class="cover-col">
+                        <a class="cover-wrapper z-depth-1 hoverable"
+                            href="#">
+
+                            <img class="" src="img/h4.jpeg"
+                                onerror="javascript:this.src='/static/img/default-cover.jpg'">
+
+                        </a>
+                    </div>
+                    <div class="info-col">
+                        <a class="tooltipped" data-position="bottom" data-delay="50"
+                            data-tooltip="Bạch nguyệt quang nghịch tập [ xuyên nhanh ]"
+                            href="#"
+                            data-tooltip-id="dca9aaec-06c3-af06-d7d1-ea2672425482">
+                            <h5 class="book-title truncate">Bạch nguyệt quang nghịch tập [ xuyên nhanh ]</h5>
+                        </a>
+                        <p class="book-author"><a class="truncate" href="#">Nam Thư</a></p>
+                        <p class="book-publisher"><a class="truncate" href="#">lttvy</a></p>
+                        <p class="book-gender">Đam mỹ</p>
+                        <p class="book-publisher"><a class="truncate"
+                                href="#">Hoàn thành</a></p>
+                        <p class="book-stats-box">
+                            <span class="book-stats"><i class="material-icons">visibility</i><span
+                                    data-ready="abbrNum">0.2m</span></span>
+                            <span class="book-stats"><i class="material-icons">star</i><span
+                                    data-ready="abbrNum">2.3k</span></span>
+                            <span class="book-stats"><i class="fa fa-comment" aria-hidden="true"></i><span
+                                    data-ready="abbrNum">140</span></span>
+                        </p>
+                    </div>
+                </div>
+
+
+
+
+                <div class="book-item">
+                    <div class="cover-col">
+                        <a class="cover-wrapper z-depth-1 hoverable"
+                            href="#">
+
+                            <img class="" src="img/h5.jpeg"
+                                onerror="javascript:this.src='/static/img/default-cover.jpg'">
+
+                        </a>
+                    </div>
+                    <div class="info-col">
+                        <a class="tooltipped" data-position="bottom" data-delay="50"
+                            data-tooltip="【Trọng sinh】Sư phụ không tìm đường chết"
+                            href="#"
+                            data-tooltip-id="b2d68637-6600-cdcc-4459-b80162a28a03">
+                            <h5 class="book-title truncate">【Trọng sinh】Sư phụ không tìm đường chết</h5>
+                        </a>
+                        <p class="book-author"><a class="truncate" href="#">Khúc Giai</a></p>
+                        <p class="book-publisher"><a class="truncate" href="#">Mochi</a></p>
+                        <p class="book-gender">Đam mỹ</p>
+                        <p class="book-publisher"><a class="truncate"
+                                href="#">Hoàn thành</a></p>
+                        <p class="book-stats-box">
+                            <span class="book-stats"><i class="material-icons">visibility</i><span
+                                    data-ready="abbrNum">0.2m</span></span>
+                            <span class="book-stats"><i class="material-icons">star</i><span
+                                    data-ready="abbrNum">931</span></span>
+                            <span class="book-stats"><i class="fa fa-comment" aria-hidden="true"></i><span
+                                    data-ready="abbrNum">50</span></span>
+                        </p>
+                    </div>
+                </div>
+
+
+
+
+                <div class="book-item">
+                    <div class="cover-col">
+                        <a class="cover-wrapper z-depth-1 hoverable"
+                            href="#">
+
+                            <img class="" src="img/h6.jpeg"
+                                onerror="javascript:this.src='/static/img/default-cover.jpg'">
+
+                        </a>
+                    </div>
+                    <div class="info-col">
+                        <a class="tooltipped" data-position="bottom" data-delay="50"
+                            data-tooltip="Bị ta tra quá nam chủ trọng sinh [ xuyên nhanh ]"
+                            href="#"
+                            data-tooltip-id="5e709b03-61ef-a973-fe2f-52f635145cb2">
+                            <h5 class="book-title truncate">Bị ta tra quá nam chủ trọng sinh [ xuyên nhanh ]</h5>
+                        </a>
+                        <p class="book-author"><a class="truncate" href="#">Chước Nhiễm</a>
+                        </p>
+                        <p class="book-publisher"><a class="truncate" href="#">Lucky Clover</a></p>
+                        <p class="book-gender">Đam mỹ</p>
+                        <p class="book-publisher"><a class="truncate"
+                                href="#">Hoàn thành</a></p>
+                        <p class="book-stats-box">
+                            <span class="book-stats"><i class="material-icons">visibility</i><span
+                                    data-ready="abbrNum">0.7m</span></span>
+                            <span class="book-stats"><i class="material-icons">star</i><span
+                                    data-ready="abbrNum">13k</span></span>
+                            <span class="book-stats"><i class="fa fa-comment" aria-hidden="true"></i><span
+                                    data-ready="abbrNum">654</span></span>
+                        </p>
+                    </div>
+                </div>
+
+
+
+
+                <div class="book-item">
+                    <div class="cover-col">
+                        <a class="cover-wrapper z-depth-1 hoverable" href="#">
+
+                            <img class="" src="img/h7.jpeg"
+                                onerror="javascript:this.src='/static/img/default-cover.jpg'">
+
+                        </a>
+                    </div>
+                    <div class="info-col">
+                        <a class="tooltipped" data-position="bottom" data-delay="50" data-tooltip=" Chiêu Hề Cựu Thảo"
+                            href="#"
+                            data-tooltip-id="62d94b68-dec0-cb13-081f-ab06a375acbb">
+                            <h5 class="book-title truncate"> Chiêu Hề Cựu Thảo</h5>
+                        </a>
+                        <p class="book-author"><a class="truncate"
+                                href="#">Thư Hải Thương Sinh</a></p>
+                        <p class="book-publisher"><a class="truncate" href="#">Tâm Tít
+                                Tắp</a></p>
+                        <p class="book-gender">Ngôn tình</p>
+                        <p class="book-publisher"><a class="truncate"
+                                href="#">Hoàn thành</a></p>
+                        <p class="book-stats-box">
+                            <span class="book-stats"><i class="material-icons">visibility</i><span
+                                    data-ready="abbrNum">13k</span></span>
+                            <span class="book-stats"><i class="material-icons">star</i><span
+                                    data-ready="abbrNum">4</span></span>
+                            <span class="book-stats"><i class="fa fa-comment" aria-hidden="true"></i><span
+                                    data-ready="abbrNum">6</span></span>
+                        </p>
+                    </div>
+                </div>
+
+
+
+
+                <div class="book-item">
+                    <div class="cover-col">
+                        <a class="cover-wrapper z-depth-1 hoverable" href="#">
+
+                            <img class="" src="img/h8.jpeg"
+                                onerror="javascript:this.src='/static/img/default-cover.jpg'">
+
+                        </a>
+                    </div>
+                    <div class="info-col">
+                        <a class="tooltipped" data-position="bottom" data-delay="50" data-tooltip="Nhị hôn"
+                            href="#"
+                            data-tooltip-id="0c266b20-0795-3511-3779-23e6bfc49a4c">
+                            <h5 class="book-title truncate">Nhị hôn</h5>
+                        </a>
+                        <p class="book-author"><a class="truncate"
+                                href="#">Vô Nhàn Hòa Hữu Nhàn</a>
+                        </p>
+                        <p class="book-publisher"><a class="truncate" href="#">Khóa
+                                luận tốt nghiệp được 9 điểm</a></p>
+                        <p class="book-gender">Ngôn tình</p>
+                        <p class="book-publisher"><a class="truncate"
+                                href="#">Hoàn thành</a></p>
+                        <p class="book-stats-box">
+                            <span class="book-stats"><i class="material-icons">visibility</i><span
+                                    data-ready="abbrNum">3.8k</span></span>
+                            <span class="book-stats"><i class="material-icons">star</i><span
+                                    data-ready="abbrNum">0</span></span>
+                            <span class="book-stats"><i class="fa fa-comment" aria-hidden="true"></i><span
+                                    data-ready="abbrNum">1</span></span>
+                        </p>
+                    </div>
+                </div>
+
+
+
+
+                <div class="book-item">
+                    <div class="cover-col">
+                        <a class="cover-wrapper z-depth-1 hoverable" href="#">
+
+                            <img class="" src="img/h9.jpeg"
+                                onerror="javascript:this.src='/static/img/default-cover.jpg'">
+
+                        </a>
+                    </div>
+                    <div class="info-col">
+                        <a class="tooltipped" data-position="bottom" data-delay="50" data-tooltip="Thứ dân"
+                            href="#"
+                            data-tooltip-id="bfb765da-fece-0c6b-18f8-11e2c3a3c362">
+                            <h5 class="book-title truncate">Thứ dân</h5>
+                        </a>
+                        <p class="book-author"><a class="truncate" href="#">Tha Dữ Đăng</a></p>
+                        <p class="book-publisher"><a class="truncate" href="#">ＬＥＯ ＳＩＮＧ</a></p>
+                        <p class="book-gender">Ngôn tình</p>
+                        <p class="book-publisher"><a class="truncate"
+                                href="/tim-kiem?status=5794f03dd7ced228f4419191">Hoàn thành</a></p>
+                        <p class="book-stats-box">
+                            <span class="book-stats"><i class="material-icons">visibility</i><span
+                                    data-ready="abbrNum">28k</span></span>
+                            <span class="book-stats"><i class="material-icons">star</i><span
+                                    data-ready="abbrNum">67</span></span>
+                            <span class="book-stats"><i class="fa fa-comment" aria-hidden="true"></i><span
+                                    data-ready="abbrNum">16</span></span>
+                        </p>
+                    </div>
+                </div>
+
+
+
+
+                <div class="book-item">
+                    <div class="cover-col">
+                        <a class="cover-wrapper z-depth-1 hoverable"
+                            href="#">
+
+                            <img class="" src="img/h10.jpeg"
+                                onerror="javascript:this.src='/static/img/default-cover.jpg'">
+
+                        </a>
+                    </div>
+                    <div class="info-col">
+                        <a class="tooltipped" data-position="bottom" data-delay="50"
+                            data-tooltip="Thuốc dẫn của bạch nguyệt quang trọng sinh"
+                            href="#"
+                            data-tooltip-id="c149e79e-efe3-f695-2fe8-4e6c69bd576c">
+                            <h5 class="book-title truncate">Thuốc dẫn của bạch nguyệt quang trọng sinh</h5>
+                        </a>
+                        <p class="book-author"><a class="truncate"
+                                href="#">Thạch Thượng Thanh Tuyền</a></p>
+                        <p class="book-publisher"><a class="truncate" href="/user/meocon213">╮(￣︶￣)╭</a></p>
+                        <p class="book-gender">Ngôn tình</p>
+                        <p class="book-publisher"><a class="truncate"
+                                href="/tim-kiem?status=5794f03dd7ced228f4419191">Hoàn thành</a></p>
+                        <p class="book-stats-box">
+                            <span class="book-stats"><i class="material-icons">visibility</i><span
+                                    data-ready="abbrNum">17k</span></span>
+                            <span class="book-stats"><i class="material-icons">star</i><span
+                                    data-ready="abbrNum">111</span></span>
+                            <span class="book-stats"><i class="fa fa-comment" aria-hidden="true"></i><span
+                                    data-ready="abbrNum">10</span></span>
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+            <div class="line"></div>
+            <div class="category">Rating cao trong tuần</div>
+            <div class="view-all"><a href="/bang-xep-hang?tr=1&amp;so=2">Xem tất cả <i class="fa fa-angle-double-right"
+                        aria-hidden="true"></i></a></div>
+            <div class="book-list">
+
+                <div class="book-item">
+            <div class="cover-col">
+                <a class="cover-wrapper z-depth-1 hoverable" href="/truyen/bi-bat-thu-phuc-bach-thiet-hac-tien-ton-ZAH951S4CGAOBU0H">
+                    
+<img class="" src="img/h11.jpeg" style="" onerror="javascript:this.src='/static/img/default-cover.jpg'">
+
+                </a>
+            </div>
+            <div class="info-col">
+                <a class="tooltipped" data-position="bottom" data-delay="50" data-tooltip="Bị bắt thu phục bạch thiết hắc Tiên Tôn" href="/truyen/bi-bat-thu-phuc-bach-thiet-hac-tien-ton-ZAH951S4CGAOBU0H" data-tooltip-id="ed2a0375-1801-04ef-291d-6cd142e0fd11">
+                    <h5 class="book-title truncate">Bị bắt thu phục bạch thiết hắc Tiên Tôn</h5>
+                </a>
+                <p class="book-author"><a class="truncate" href="/tac-gia/%E4%B8%80%E5%B8%86%E8%88%B9">Nhất Phàm Thuyền</a></p>
+                <p class="book-publisher"><a class="truncate" href="/user/cacty-cat">𝐂𝐚𝐜𝐭𝐲 𝐂𝐚𝐭 🌵</a></p>
+                <p class="book-gender">Ngôn tình</p>
+                <p class="book-publisher"><a class="truncate" href="/tim-kiem?status=5794f03dd7ced228f4419191">Hoàn thành</a></p>
+                <p class="book-stats-box">
+                    <span class="book-stats"><i class="material-icons">visibility</i><span data-ready="abbrNum">821</span></span>
+                    <span class="book-stats"><i class="material-icons">star</i><span data-ready="abbrNum">10</span></span>
+                    <span class="book-stats"><i class="fa fa-comment" aria-hidden="true"></i><span data-ready="abbrNum">3</span></span>
+                </p>
+            </div>
+        </div>
+
+                <div class="book-item">
+                    <div class="cover-col">
+                        <a class="cover-wrapper z-depth-1 hoverable"
+                            href="/truyen/ta-vuong-truy-the-mot-doi-khuynh-thanh-l-WGisGnCVfDu8oxFQ">
+
+                            <img class="" src="img/h12.jpeg"
+                                onerror="javascript:this.src='/static/img/default-cover.jpg'">
+
+                        </a>
+                    </div>
+                    <div class="info-col">
+                        <a class="tooltipped" data-position="bottom" data-delay="50"
+                            data-tooltip="Tà Vương truy thê / Một đời khuynh thành / Lầm chọc yêu nghiệt Vương gia: Phế tài nghịch thiên tứ tiểu thư"
+                            href="/truyen/ta-vuong-truy-the-mot-doi-khuynh-thanh-l-WGisGnCVfDu8oxFQ"
+                            data-tooltip-id="d06d26c6-f470-40b5-e566-f03c6c4d0222">
+                            <h5 class="book-title truncate">Tà Vương truy thê / Một đời khuynh thành / Lầm chọc yêu
+                                nghiệt Vương gia: Phế tài nghịch thiên tứ tiểu thư</h5>
+                        </a>
+                        <p class="book-author"><a class="truncate" href="/tac-gia/%E8%8B%8F%E5%B0%8F%E6%9A%96">Tô Tiểu
+                                Noãn</a></p>
+                        <p class="book-publisher"><a class="truncate" href="/user/b%E1%BA%A1ch-m%E1%BB%99ng-lam">Bạch
+                                Mộng Lam</a></p>
+                        <p class="book-gender">Ngôn tình</p>
+                        <p class="book-publisher"><a class="truncate"
+                                href="/tim-kiem?status=5794f03dd7ced228f4419191">Hoàn thành</a></p>
+                        <p class="book-stats-box">
+                            <span class="book-stats"><i class="material-icons">visibility</i><span
+                                    data-ready="abbrNum">27m</span></span>
+                            <span class="book-stats"><i class="material-icons">star</i><span
+                                    data-ready="abbrNum">20k</span></span>
+                            <span class="book-stats"><i class="fa fa-comment" aria-hidden="true"></i><span
+                                    data-ready="abbrNum">596</span></span>
+                        </p>
+                    </div>
+                </div>
+
+                <div class="book-item">
+                    <div class="cover-col">
+                        <a class="cover-wrapper z-depth-1 hoverable"
+                            href="/truyen/xuyen-nhanh-cuu-mang-nam-chu-tat-ca-deu--XFBSVlS4CC3CoBRt">
+
+                            <img class="" src="img/h13.jpeg"
+                                onerror="javascript:this.src='/static/img/default-cover.jpg'">
+
+                        </a>
+                    </div>
+                    <div class="info-col">
+                        <a class="tooltipped" data-position="bottom" data-delay="50"
+                            data-tooltip="Xuyên nhanh: Cứu mạng, nam chủ tất cả đều tan vỡ!"
+                            href="/truyen/xuyen-nhanh-cuu-mang-nam-chu-tat-ca-deu--XFBSVlS4CC3CoBRt"
+                            data-tooltip-id="8bad07c9-6260-5436-77ad-ffd97780e195">
+                            <h5 class="book-title truncate">Xuyên nhanh: Cứu mạng, nam chủ tất cả đều tan vỡ!</h5>
+                        </a>
+                        <p class="book-author"><a class="truncate" href="/tac-gia/%E8%8A%B1%E7%94%9F%E9%85%B1">Hoa Sinh
+                                Tương</a></p>
+                        <p class="book-publisher"><a class="truncate" href="/user/strawberryisblue">StrawberryIsBlue</a>
+                        </p>
+                        <p class="book-gender">Ngôn tình</p>
+                        <p class="book-publisher"><a class="truncate"
+                                href="/tim-kiem?status=5794f03dd7ced228f4419191">Hoàn thành</a></p>
+                        <p class="book-stats-box">
+                            <span class="book-stats"><i class="material-icons">visibility</i><span
+                                    data-ready="abbrNum">3.2m</span></span>
+                            <span class="book-stats"><i class="material-icons">star</i><span
+                                    data-ready="abbrNum">23k</span></span>
+                            <span class="book-stats"><i class="fa fa-comment" aria-hidden="true"></i><span
+                                    data-ready="abbrNum">681</span></span>
+                        </p>
+                    </div>
+                </div>
+
+                <div class="book-item">
+                    <div class="cover-col">
+                        <a class="cover-wrapper z-depth-1 hoverable" href="/truyen/luan-hoi-nhac-vien-WXROhO8h7B42bGUk">
+
+                            <img class="" src="img/h14.jpeg"
+                                onerror="javascript:this.src='/static/img/default-cover.jpg'">
+
+                        </a>
+                    </div>
+                    <div class="info-col">
+                        <a class="tooltipped" data-position="bottom" data-delay="50" data-tooltip="Luân hồi nhạc viên"
+                            href="/truyen/luan-hoi-nhac-vien-WXROhO8h7B42bGUk"
+                            data-tooltip-id="37e5d326-549a-4149-7610-95d21636148a">
+                            <h5 class="book-title truncate">Luân hồi nhạc viên</h5>
+                        </a>
+                        <p class="book-author"><a class="truncate"
+                                href="/tac-gia/%E9%82%A3%E4%B8%80%E5%8F%AA%E8%9A%8A%E5%AD%90">Na Nhất Chỉ Văn Tử</a></p>
+                        <p class="book-publisher"><a class="truncate" href="/user/abhello">Abhello</a></p>
+                        <p class="book-gender">Nam sinh</p>
+                        <p class="book-publisher"><a class="truncate"
+                                href="/tim-kiem?status=5794f03dd7ced228f4419192">Còn tiếp</a></p>
+                        <p class="book-stats-box">
+                            <span class="book-stats"><i class="material-icons">visibility</i><span
+                                    data-ready="abbrNum">4.5m</span></span>
+                            <span class="book-stats"><i class="material-icons">star</i><span
+                                    data-ready="abbrNum">0.1m</span></span>
+                            <span class="book-stats"><i class="fa fa-comment" aria-hidden="true"></i><span
+                                    data-ready="abbrNum">3.4k</span></span>
+                        </p>
+                    </div>
+                </div>
+
+                <div class="book-item">
+                    <div class="cover-col">
+                        <a class="cover-wrapper z-depth-1 hoverable"
+                            href="/truyen/xuyen-nhanh-nu-chu-gia-lam-nu-xung-mau-l-WGOsIXCVfDo7XtpA">
+
+                            <img class="" src="img/h15.jpeg"
+                                onerror="javascript:this.src='/static/img/default-cover.jpg'">
+
+                        </a>
+                    </div>
+                    <div class="info-col">
+                        <a class="tooltipped" data-position="bottom" data-delay="50"
+                            data-tooltip="Xuyên nhanh: Nữ chủ giá lâm, nữ xứng mau lui tán!"
+                            href="/truyen/xuyen-nhanh-nu-chu-gia-lam-nu-xung-mau-l-WGOsIXCVfDo7XtpA"
+                            data-tooltip-id="97a46f06-608f-0d86-d2df-1217511f7af3">
+                            <h5 class="book-title truncate">Xuyên nhanh: Nữ chủ giá lâm, nữ xứng mau lui tán!</h5>
+                        </a>
+                        <p class="book-author"><a class="truncate"
+                                href="/tac-gia/%E7%B4%A0%E6%89%8B%E6%8A%98%E6%9E%9D">Tố Thủ Chiết Chi</a></p>
+                        <p class="book-publisher"><a class="truncate" href="/user/%C3%A1nh-nguy%E1%BB%87t">Ánh
+                                Nguyệt</a></p>
+                        <p class="book-gender">Ngôn tình</p>
+                        <p class="book-publisher"><a class="truncate"
+                                href="/tim-kiem?status=5794f03dd7ced228f4419191">Hoàn thành</a></p>
+                        <p class="book-stats-box">
+                            <span class="book-stats"><i class="material-icons">visibility</i><span
+                                    data-ready="abbrNum">11m</span></span>
+                            <span class="book-stats"><i class="material-icons">star</i><span
+                                    data-ready="abbrNum">21k</span></span>
+                            <span class="book-stats"><i class="fa fa-comment" aria-hidden="true"></i><span
+                                    data-ready="abbrNum">690</span></span>
+                        </p>
+                    </div>
+                </div>
+
+                <div class="book-item">
+                    <div class="cover-col">
+                        <a class="cover-wrapper z-depth-1 hoverable"
+                            href="/truyen/xuyen-thanh-nam-xung-ba-ba-XUafWFS4CAbICU%7El">
+
+                            <img class="" src="img/h16.jpeg"
+                                onerror="javascript:this.src='/static/img/default-cover.jpg'">
+
+                        </a>
+                    </div>
+                    <div class="info-col">
+                        <a class="tooltipped" data-position="bottom" data-delay="50"
+                            data-tooltip="Xuyên thành nam xứng ba ba"
+                            href="/truyen/xuyen-thanh-nam-xung-ba-ba-XUafWFS4CAbICU%7El"
+                            data-tooltip-id="5d39a5d2-5054-f9a8-1e2e-1f11765c9342">
+                            <h5 class="book-title truncate">Xuyên thành nam xứng ba ba</h5>
+                        </a>
+                        <p class="book-author"><a class="truncate"
+                                href="/tac-gia/%E7%B4%AB%E8%89%B2%E6%9C%A8%E5%B1%8B">Tử Sắc Mộc Ốc</a></p>
+                        <p class="book-publisher"><a class="truncate" href="/user/mafuki">Mochi</a></p>
+                        <p class="book-gender">Đam mỹ</p>
+                        <p class="book-publisher"><a class="truncate"
+                                href="/tim-kiem?status=5794f03dd7ced228f4419191">Hoàn thành</a></p>
+                        <p class="book-stats-box">
+                            <span class="book-stats"><i class="material-icons">visibility</i><span
+                                    data-ready="abbrNum">3.2m</span></span>
+                            <span class="book-stats"><i class="material-icons">star</i><span
+                                    data-ready="abbrNum">38k</span></span>
+                            <span class="book-stats"><i class="fa fa-comment" aria-hidden="true"></i><span
+                                    data-ready="abbrNum">576</span></span>
+                        </p>
+                    </div>
+                </div>
+
+                <div class="book-item">
+                    <div class="cover-col">
+                        <a class="cover-wrapper z-depth-1 hoverable" href="/truyen/han-huong-WakSR%7E8h7HHd2VTM">
+
+                            <img class="" src="img/h17.jpeg"
+                                onerror="javascript:this.src='/static/img/default-cover.jpg'">
+
+                        </a>
+                    </div>
+                    <div class="info-col">
+                        <a class="tooltipped" data-position="bottom" data-delay="50" data-tooltip="Hán Hương"
+                            href="/truyen/han-huong-WakSR%7E8h7HHd2VTM"
+                            data-tooltip-id="903d1ea5-bab9-1530-7c97-164353dd5a15">
+                            <h5 class="book-title truncate">Hán Hương</h5>
+                        </a>
+                        <p class="book-author"><a class="truncate" href="/tac-gia/%E5%AD%91%E4%B8%8E2">Kiết Dữ 2</a></p>
+                        <p class="book-publisher"><a class="truncate" href="/user/anhminh520">anhminh520</a></p>
+                        <p class="book-gender">Nam sinh</p>
+                        <p class="book-publisher"><a class="truncate"
+                                href="/tim-kiem?status=5794f03dd7ced228f4419191">Hoàn thành</a></p>
+                        <p class="book-stats-box">
+                            <span class="book-stats"><i class="material-icons">visibility</i><span
+                                    data-ready="abbrNum">0.4m</span></span>
+                            <span class="book-stats"><i class="material-icons">star</i><span
+                                    data-ready="abbrNum">2k</span></span>
+                            <span class="book-stats"><i class="fa fa-comment" aria-hidden="true"></i><span
+                                    data-ready="abbrNum">26</span></span>
+                        </p>
+                    </div>
+                </div>
+
+                <div class="book-item">
+                    <div class="cover-col">
+                        <a class="cover-wrapper z-depth-1 hoverable"
+                            href="/truyen/xuyen-thu-sau-ta-bien-doan-sung-XrtlE1S4CGcgUVHH">
+
+                            <img class="" src="img/h18.jpeg"
+                                onerror="javascript:this.src='/static/img/default-cover.jpg'">
+
+                        </a>
+                    </div>
+                    <div class="info-col">
+                        <a class="tooltipped" data-position="bottom" data-delay="50"
+                            data-tooltip="Xuyên thư sau ta biến đoàn sủng"
+                            href="/truyen/xuyen-thu-sau-ta-bien-doan-sung-XrtlE1S4CGcgUVHH"
+                            data-tooltip-id="fddcf075-35c3-2226-ba4a-33ea47a84714">
+                            <h5 class="book-title truncate">Xuyên thư sau ta biến đoàn sủng</h5>
+                        </a>
+                        <p class="book-author"><a class="truncate"
+                                href="/tac-gia/%E5%BE%88%E6%98%AF%E7%9F%AB%E6%83%85">Ngận Thị Kiểu Tình</a></p>
+                        <p class="book-publisher"><a class="truncate" href="/user/nhue-pham">Mai-san</a></p>
+                        <p class="book-gender">Không CP</p>
+                        <p class="book-publisher"><a class="truncate"
+                                href="/tim-kiem?status=5794f03dd7ced228f4419191">Hoàn thành</a></p>
+                        <p class="book-stats-box">
+                            <span class="book-stats"><i class="material-icons">visibility</i><span
+                                    data-ready="abbrNum">1.6m</span></span>
+                            <span class="book-stats"><i class="material-icons">star</i><span
+                                    data-ready="abbrNum">21k</span></span>
+                            <span class="book-stats"><i class="fa fa-comment" aria-hidden="true"></i><span
+                                    data-ready="abbrNum">965</span></span>
+                        </p>
+                    </div>
+                </div>
+
+                <div class="book-item">
+                    <div class="cover-col">
+                        <a class="cover-wrapper z-depth-1 hoverable"
+                            href="/truyen/van-thu-trieu-hoang-W3uyrVS4CCGo4hJT">
+
+                            <img class="" src="img/h19.jpeg"
+                                onerror="javascript:this.src='/static/img/default-cover.jpg'">
+
+                        </a>
+                    </div>
+                    <div class="info-col">
+                        <a class="tooltipped" data-position="bottom" data-delay="50" data-tooltip="Vạn thú triều hoàng"
+                            href="/truyen/van-thu-trieu-hoang-W3uyrVS4CCGo4hJT"
+                            data-tooltip-id="fca24a20-5472-9997-a3e9-5dabd488fd40">
+                            <h5 class="book-title truncate">Vạn thú triều hoàng</h5>
+                        </a>
+                        <p class="book-author"><a class="truncate"
+                                href="/tac-gia/%E7%BE%BD%E6%89%87%E7%94%BB%E6%B0%B4">Vũ Phiến Họa Thủy</a></p>
+                        <p class="book-publisher"><a class="truncate" href="/user/qingjuan">QingJuan</a></p>
+                        <p class="book-gender">Ngôn tình</p>
+                        <p class="book-publisher"><a class="truncate"
+                                href="/tim-kiem?status=5794f03dd7ced228f4419191">Hoàn thành</a></p>
+                        <p class="book-stats-box">
+                            <span class="book-stats"><i class="material-icons">visibility</i><span
+                                    data-ready="abbrNum">3.4m</span></span>
+                            <span class="book-stats"><i class="material-icons">star</i><span
+                                    data-ready="abbrNum">55k</span></span>
+                            <span class="book-stats"><i class="fa fa-comment" aria-hidden="true"></i><span
+                                    data-ready="abbrNum">1.5k</span></span>
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+            <div class="line"></div>
+            <div class="category">Mới nhất</div>
+            <div class="view-all"><a href="/bang-xep-hang?so=4">Xem tất cả <i class="fa fa-angle-double-right"
+                        aria-hidden="true"></i></a></div>
+            <div class="book-list">
+
+                <div class="book-item">
+                    <div class="cover-col">
+                        <a class="cover-wrapper z-depth-1 hoverable"
+                            href="/truyen/thay-ta-hon-hoa-hong-ZIcrYVS4CBggXz_o">
+
+                            <img class="" src="img/h20.jpeg"
+                                onerror="javascript:this.src='/static/img/default-cover.jpg'">
+
+                        </a>
+                    </div>
+                    <div class="info-col">
+                        <a class="tooltipped" data-position="bottom" data-delay="50" data-tooltip="Thay ta hôn hoa hồng"
+                            href="/truyen/thay-ta-hon-hoa-hong-ZIcrYVS4CBggXz_o"
+                            data-tooltip-id="682b507c-c00d-1eba-48ba-34772bf2f310">
+                            <h5 class="book-title truncate">Thay ta hôn hoa hồng</h5>
+                        </a>
+                        <p class="book-author"><a class="truncate" href="/tac-gia/wesang">wesang</a></p>
+                        <p class="book-publisher"><a class="truncate" href="/user/cacty-cat">𝐂𝐚𝐜𝐭𝐲 𝐂𝐚𝐭 🌵</a>
+                        </p>
+                        <p class="book-gender">Đam mỹ</p>
+                        <p class="book-publisher"><a class="truncate"
+                                href="/tim-kiem?status=5794f03dd7ced228f4419191">Hoàn thành</a></p>
+                        <p class="book-stats-box">
+                            <span class="book-stats"><i class="material-icons">visibility</i><span
+                                    data-ready="abbrNum">1</span></span>
+                            <span class="book-stats"><i class="material-icons">star</i><span
+                                    data-ready="abbrNum">0</span></span>
+                            <span class="book-stats"><i class="fa fa-comment" aria-hidden="true"></i><span
+                                    data-ready="abbrNum">0</span></span>
+                        </p>
+                    </div>
+                </div>
+
+                <div class="book-item">
+                    <div class="cover-col">
+                        <a class="cover-wrapper z-depth-1 hoverable"
+                            href="/truyen/han-vi-cai-gi-thich-ta-ZIcrJlS4CBggXz_k">
+
+                            <img class="" src="img/h21.jpeg"
+                                onerror="javascript:this.src='/static/img/default-cover.jpg'">
+
+                        </a>
+                    </div>
+                    <div class="info-col">
+                        <a class="tooltipped" data-position="bottom" data-delay="50"
+                            data-tooltip="Hắn vì cái gì thích ta" href="/truyen/han-vi-cai-gi-thich-ta-ZIcrJlS4CBggXz_k"
+                            data-tooltip-id="635a6fe6-5aa1-8fcf-c57e-780bae5d8421">
+                            <h5 class="book-title truncate">Hắn vì cái gì thích ta</h5>
+                        </a>
+                        <p class="book-author"><a class="truncate" href="/tac-gia/wesang">wesang</a></p>
+                        <p class="book-publisher"><a class="truncate" href="/user/cacty-cat">𝐂𝐚𝐜𝐭𝐲 𝐂𝐚𝐭 🌵</a>
+                        </p>
+                        <p class="book-gender">Đam mỹ</p>
+                        <p class="book-publisher"><a class="truncate"
+                                href="/tim-kiem?status=5794f03dd7ced228f4419191">Hoàn thành</a></p>
+                        <p class="book-stats-box">
+                            <span class="book-stats"><i class="material-icons">visibility</i><span
+                                    data-ready="abbrNum">2</span></span>
+                            <span class="book-stats"><i class="material-icons">star</i><span
+                                    data-ready="abbrNum">0</span></span>
+                            <span class="book-stats"><i class="fa fa-comment" aria-hidden="true"></i><span
+                                    data-ready="abbrNum">0</span></span>
+                        </p>
+                    </div>
+                </div>
+
+                <div class="book-item">
+                    <div class="cover-col">
+                        <a class="cover-wrapper z-depth-1 hoverable"
+                            href="/truyen/xuyen-thanh-phe-tai-sau-nu-ma-dau-dua-tu-ZIcoeVS4CBghacTl">
+
+                            <img class="" src="img/h22.jpeg"
+                                onerror="javascript:this.src='/static/img/default-cover.jpg'">
+
+                        </a>
+                    </div>
+                    <div class="info-col">
+                        <a class="tooltipped" data-position="bottom" data-delay="50"
+                            data-tooltip="Xuyên thành phế tài sau, nữ ma đầu dựa tu tiên xoay người tẩy trắng"
+                            href="/truyen/xuyen-thanh-phe-tai-sau-nu-ma-dau-dua-tu-ZIcoeVS4CBghacTl"
+                            data-tooltip-id="a3b64ecf-99eb-ac36-301d-f87642198c73">
+                            <h5 class="book-title truncate">Xuyên thành phế tài sau, nữ ma đầu dựa tu tiên xoay người
+                                tẩy trắng</h5>
+                        </a>
+                        <p class="book-author"><a class="truncate" href="/tac-gia/%E7%BB%B5%E5%85%94">Miên Thỏ</a></p>
+                        <p class="book-publisher"><a class="truncate" href="/user/sieuphuthuy">sieuphuthuy</a></p>
+                        <p class="book-gender">Ngôn tình</p>
+                        <p class="book-publisher"><a class="truncate"
+                                href="/tim-kiem?status=5794f03dd7ced228f4419192">Còn tiếp</a></p>
+                        <p class="book-stats-box">
+                            <span class="book-stats"><i class="material-icons">visibility</i><span
+                                    data-ready="abbrNum">11</span></span>
+                            <span class="book-stats"><i class="material-icons">star</i><span
+                                    data-ready="abbrNum">0</span></span>
+                            <span class="book-stats"><i class="fa fa-comment" aria-hidden="true"></i><span
+                                    data-ready="abbrNum">0</span></span>
+                        </p>
+                    </div>
+                </div>
+
+                <div class="book-item">
+                    <div class="cover-col">
+                        <a class="cover-wrapper z-depth-1 hoverable"
+                            href="/truyen/lam-tinh-manh-nhat-nu-hoc-ba-ZIcnyVS4CBghacTh">
+
+                            <img class="" src="img/h23.jpeg"
+                                onerror="javascript:this.src='/static/img/default-cover.jpg'">
+
+                        </a>
+                    </div>
+                    <div class="info-col">
+                        <a class="tooltipped" data-position="bottom" data-delay="50"
+                            data-tooltip="Lam tinh mạnh nhất nữ học bá"
+                            href="/truyen/lam-tinh-manh-nhat-nu-hoc-ba-ZIcnyVS4CBghacTh"
+                            data-tooltip-id="2d582b09-4805-d2f3-4dd0-799aebed9762">
+                            <h5 class="book-title truncate">Lam tinh mạnh nhất nữ học bá</h5>
+                        </a>
+                        <p class="book-author"><a class="truncate" href="/tac-gia/%E9%BB%91%E6%A1%83%E5%B0%8FA">Hắc Đào
+                                Tiểu A</a></p>
+                        <p class="book-publisher"><a class="truncate" href="/user/sieuphuthuy">sieuphuthuy</a></p>
+                        <p class="book-gender">Ngôn tình</p>
+                        <p class="book-publisher"><a class="truncate"
+                                href="/tim-kiem?status=5794f03dd7ced228f4419192">Còn tiếp</a></p>
+                        <p class="book-stats-box">
+                            <span class="book-stats"><i class="material-icons">visibility</i><span
+                                    data-ready="abbrNum">6</span></span>
+                            <span class="book-stats"><i class="material-icons">star</i><span
+                                    data-ready="abbrNum">0</span></span>
+                            <span class="book-stats"><i class="fa fa-comment" aria-hidden="true"></i><span
+                                    data-ready="abbrNum">0</span></span>
+                        </p>
+                    </div>
+                </div>
+
+                <div class="book-item">
+                    <div class="cover-col">
+                        <a class="cover-wrapper z-depth-1 hoverable"
+                            href="/truyen/vua-mo-mat-kieu-mem-thanh-nien-tri-thuc--ZIcnGVS4CBggXz_f">
+
+                            <img class="" src="img/h24.jpeg"
+                                onerror="javascript:this.src='/static/img/default-cover.jpg'">
+
+                        </a>
+                    </div>
+                    <div class="info-col">
+                        <a class="tooltipped" data-position="bottom" data-delay="50"
+                            data-tooltip="Vừa mở mắt! Kiều mềm thanh niên trí thức bị tháo hán véo eo thân khóc"
+                            href="/truyen/vua-mo-mat-kieu-mem-thanh-nien-tri-thuc--ZIcnGVS4CBggXz_f"
+                            data-tooltip-id="afc6c2f7-5779-6b23-0e39-bcf57b357faa">
+                            <h5 class="book-title truncate">Vừa mở mắt! Kiều mềm thanh niên trí thức bị tháo hán véo eo
+                                thân khóc</h5>
+                        </a>
+                        <p class="book-author"><a class="truncate"
+                                href="/tac-gia/%E9%94%A6%E9%B2%A4%E7%BB%98%E6%89%87">Cẩm Lí Hội Phiến</a></p>
+                        <p class="book-publisher"><a class="truncate" href="/user/sieuphuthuy">sieuphuthuy</a></p>
+                        <p class="book-gender">Ngôn tình</p>
+                        <p class="book-publisher"><a class="truncate"
+                                href="/tim-kiem?status=5794f03dd7ced228f4419192">Còn tiếp</a></p>
+                        <p class="book-stats-box">
+                            <span class="book-stats"><i class="material-icons">visibility</i><span
+                                    data-ready="abbrNum">13</span></span>
+                            <span class="book-stats"><i class="material-icons">star</i><span
+                                    data-ready="abbrNum">0</span></span>
+                            <span class="book-stats"><i class="fa fa-comment" aria-hidden="true"></i><span
+                                    data-ready="abbrNum">0</span></span>
+                        </p>
+                    </div>
+                </div>
+
+                <div class="book-item">
+                    <div class="cover-col">
+                        <a class="cover-wrapper z-depth-1 hoverable"
+                            href="/truyen/nhu-the-nao-cung-tram-giao-thu-tuong-ngo-ZIcnDlS4CBggXz_b">
+
+                            <img class="" src="img/h25.jpeg"
+                                onerror="javascript:this.src='/static/img/default-cover.jpg'">
+
+                        </a>
+                    </div>
+                    <div class="info-col">
+                        <a class="tooltipped" data-position="bottom" data-delay="50"
+                            data-tooltip="Như thế nào cùng trạm giáo thụ tương ngộ"
+                            href="/truyen/nhu-the-nao-cung-tram-giao-thu-tuong-ngo-ZIcnDlS4CBggXz_b"
+                            data-tooltip-id="5c9c4172-49c8-f674-a667-ab348db8c37d">
+                            <h5 class="book-title truncate">Như thế nào cùng trạm giáo thụ tương ngộ</h5>
+                        </a>
+                        <p class="book-author"><a class="truncate" href="/tac-gia/wesang">wesang</a></p>
+                        <p class="book-publisher"><a class="truncate" href="/user/cacty-cat">𝐂𝐚𝐜𝐭𝐲 𝐂𝐚𝐭 🌵</a>
+                        </p>
+                        <p class="book-gender">Đam mỹ</p>
+                        <p class="book-publisher"><a class="truncate"
+                                href="/tim-kiem?status=5794f03dd7ced228f4419191">Hoàn thành</a></p>
+                        <p class="book-stats-box">
+                            <span class="book-stats"><i class="material-icons">visibility</i><span
+                                    data-ready="abbrNum">3</span></span>
+                            <span class="book-stats"><i class="material-icons">star</i><span
+                                    data-ready="abbrNum">0</span></span>
+                            <span class="book-stats"><i class="fa fa-comment" aria-hidden="true"></i><span
+                                    data-ready="abbrNum">0</span></span>
+                        </p>
+                    </div>
+                </div>
+
+                <div class="book-item">
+                    <div class="cover-col">
+                        <a class="cover-wrapper z-depth-1 hoverable"
+                            href="/truyen/phao-hoi-nghich-tap-tuyet-the-my-nhan-ti-ZIcl9VS4CBgfavJ4">
+
+                            <img class="" src="img/h26.jpeg"
+                                onerror="javascript:this.src='/static/img/default-cover.jpg'">
+
+                        </a>
+                    </div>
+                    <div class="info-col">
+                        <a class="tooltipped" data-position="bottom" data-delay="50"
+                            data-tooltip="Pháo hôi nghịch tập: Tuyệt thế mỹ nhân tiến vào mau xuyên"
+                            href="/truyen/phao-hoi-nghich-tap-tuyet-the-my-nhan-ti-ZIcl9VS4CBgfavJ4"
+                            data-tooltip-id="b30e60d8-68ac-7e39-95a1-23ca2d5c3494">
+                            <h5 class="book-title truncate">Pháo hôi nghịch tập: Tuyệt thế mỹ nhân tiến vào mau xuyên
+                            </h5>
+                        </a>
+                        <p class="book-author"><a class="truncate" href="/tac-gia/%E9%94%A6%E7%8E%89">Cẩm Ngọc</a></p>
+                        <p class="book-publisher"><a class="truncate" href="/user/sieuphuthuy">sieuphuthuy</a></p>
+                        <p class="book-gender">Ngôn tình</p>
+                        <p class="book-publisher"><a class="truncate"
+                                href="/tim-kiem?status=5794f03dd7ced228f4419192">Còn tiếp</a></p>
+                        <p class="book-stats-box">
+                            <span class="book-stats"><i class="material-icons">visibility</i><span
+                                    data-ready="abbrNum">15</span></span>
+                            <span class="book-stats"><i class="material-icons">star</i><span
+                                    data-ready="abbrNum">0</span></span>
+                            <span class="book-stats"><i class="fa fa-comment" aria-hidden="true"></i><span
+                                    data-ready="abbrNum">0</span></span>
+                        </p>
+                    </div>
+                </div>
+
+                <div class="book-item">
+                    <div class="cover-col">
+                        <a class="cover-wrapper z-depth-1 hoverable"
+                            href="/truyen/hom-nay-nhieu-may-chuyen-tinh-ZIclyTzLcgJPs3Ke">
+
+                            <img class="" src="img/h27.jpeg"
+                                onerror="javascript:this.src='/static/img/default-cover.jpg'">
+
+                        </a>
+                    </div>
+                    <div class="info-col">
+                        <a class="tooltipped" data-position="bottom" data-delay="50"
+                            data-tooltip="Hôm nay nhiều mây chuyển tình "
+                            href="/truyen/hom-nay-nhieu-may-chuyen-tinh-ZIclyTzLcgJPs3Ke"
+                            data-tooltip-id="e1f2c24a-9b20-0dd0-9d49-045f4e813cfa">
+                            <h5 class="book-title truncate">Hôm nay nhiều mây chuyển tình </h5>
+                        </a>
+                        <p class="book-author"><a class="truncate" href="/tac-gia/wesang17">wesang17</a></p>
+                        <p class="book-publisher"><a class="truncate" href="/user/dufengyu">DuFengYu</a></p>
+                        <p class="book-gender">Đam mỹ</p>
+                        <p class="book-publisher"><a class="truncate"
+                                href="/tim-kiem?status=5794f03dd7ced228f4419191">Hoàn thành</a></p>
+                        <p class="book-stats-box">
+                            <span class="book-stats"><i class="material-icons">visibility</i><span
+                                    data-ready="abbrNum">4</span></span>
+                            <span class="book-stats"><i class="material-icons">star</i><span
+                                    data-ready="abbrNum">0</span></span>
+                            <span class="book-stats"><i class="fa fa-comment" aria-hidden="true"></i><span
+                                    data-ready="abbrNum">0</span></span>
+                        </p>
+                    </div>
+                </div>
+
+                <div class="book-item">
+                    <div class="cover-col">
+                        <a class="cover-wrapper z-depth-1 hoverable"
+                            href="/truyen/bi-tra-sau-cung-bon-cai-dai-lao-thuong-l-ZIcla1S4CBghacTd">
+
+                            <img class="" src="img/h28.jpeg"
+                                onerror="javascript:this.src='/static/img/default-cover.jpg'">
+
+                        </a>
+                    </div>
+                    <div class="info-col">
+                        <a class="tooltipped" data-position="bottom" data-delay="50"
+                            data-tooltip="Bị tra sau, cùng bốn cái đại lão thượng luyến tổng, ta phất nhanh"
+                            href="/truyen/bi-tra-sau-cung-bon-cai-dai-lao-thuong-l-ZIcla1S4CBghacTd"
+                            data-tooltip-id="b66cdc64-ba24-3e9f-765a-88e2922d26d9">
+                            <h5 class="book-title truncate">Bị tra sau, cùng bốn cái đại lão thượng luyến tổng, ta phất
+                                nhanh</h5>
+                        </a>
+                        <p class="book-author"><a class="truncate" href="/tac-gia/%E9%B9%BF%E5%A3%B9">Lộc Nhất</a></p>
+                        <p class="book-publisher"><a class="truncate" href="/user/sieuphuthuy">sieuphuthuy</a></p>
+                        <p class="book-gender">Ngôn tình</p>
+                        <p class="book-publisher"><a class="truncate"
+                                href="/tim-kiem?status=5794f03dd7ced228f4419192">Còn tiếp</a></p>
+                        <p class="book-stats-box">
+                            <span class="book-stats"><i class="material-icons">visibility</i><span
+                                    data-ready="abbrNum">11</span></span>
+                            <span class="book-stats"><i class="material-icons">star</i><span
+                                    data-ready="abbrNum">0</span></span>
+                            <span class="book-stats"><i class="fa fa-comment" aria-hidden="true"></i><span
+                                    data-ready="abbrNum">0</span></span>
+                        </p>
+                    </div>
+                </div>
+
+                <div class="book-item">
+                    <div class="cover-col">
+                        <a class="cover-wrapper z-depth-1 hoverable" href="/truyen/xem-co-khong-noi-ZIclM_TaEFtXMDWb">
+
+                            <img class="" src="img/h29.jpeg"
+                                onerror="javascript:this.src='/static/img/default-cover.jpg'">
+
+                        </a>
+                    </div>
+                    <div class="info-col">
+                        <a class="tooltipped" data-position="bottom" data-delay="50" data-tooltip="Xem cờ không nói "
+                            href="/truyen/xem-co-khong-noi-ZIclM_TaEFtXMDWb"
+                            data-tooltip-id="7b16ecf2-ff20-60bc-3353-f06aff87db92">
+                            <h5 class="book-title truncate">Xem cờ không nói </h5>
+                        </a>
+                        <p class="book-author"><a class="truncate"
+                                href="/tac-gia/%E5%8C%BF%E5%90%8D%E5%92%B8%E9%B1%BC">Nặc Danh Hàm Ngư</a></p>
+                        <p class="book-publisher"><a class="truncate" href="/user/dufengyu">DuFengYu</a></p>
+                        <p class="book-gender">Đam mỹ</p>
+                        <p class="book-publisher"><a class="truncate"
+                                href="/tim-kiem?status=5794f03dd7ced228f4419191">Hoàn thành</a></p>
+                        <p class="book-stats-box">
+                            <span class="book-stats"><i class="material-icons">visibility</i><span
+                                    data-ready="abbrNum">6</span></span>
+                            <span class="book-stats"><i class="material-icons">star</i><span
+                                    data-ready="abbrNum">0</span></span>
+                            <span class="book-stats"><i class="fa fa-comment" aria-hidden="true"></i><span
+                                    data-ready="abbrNum">0</span></span>
+                        </p>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+
+        </div>
+
+        </div>
+    </main>
+    <footer>
+        <div class="container">
+            <div class="footer-about">
+                <h5>Giới thiệu</h5>
+                Novels HQ là trang wed đọc truyện miễn phí, người dùng có thể truy cập dễ dàng . Với giao diện đơn giản , thân thiện và tự động hóa , Novels HQ cung cấp những trải nghiệm tiên tiến nhất mang lại cho người dùng những trải nghiệm tốt nhất có thể.
+               
+            </div>
+           
+            <div class="footer-contact">
+                <div class="contact-col">
+                    <h5>Liên kết</h5>
+                    <ul>
+                        <li><a href="index.html">Trang chủ</a></li>
+
+                        <li><a href="dangki.html">Đăng ký</a></li>
+
+                        <li><a href="dangnhap.html">Đăng nhập</a></li>
+                    </ul>
+                </div>
+                <div class="contact-col">
+                    <h5>Trợ giúp</h5>
+                    <ul>
+                        <li><a href="#">Báo lỗi</a></li>
+                        <li><a href="#">Bảo mật</a></li>
+                        <li><a href="#">Điều lệ</a></li>
+                        <li><a href="lienhe.html">Liên hệ</a></li>
+                    </ul>
+                </div>
+                <div class="contact-col">
+                    <h5>Liên hệ</h5>
+                    <ul>
+                        <li><a href="mailto:quyenntt.22itb@gmail.com">quyenntt.22itb@vku.udn.vn </a></li>
+                        <li><a href="mailto:huongtt.22itb@gmail.com">huongtt.22itb@vku.udn.vn </a></li>
+
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-copyright">
+                Copyright © 2023-2030 Novels HQ. All rights reserved.
+            </div>
+
+        </div>
+    </footer>
+    <!-- <script>
+        var $grid = $('.grid').masonry({
+            itemSelector: '.grid-item',
+            columnWidth: 234,
+        });
+
+        $grid.imagesLoaded().progress(function () {
+            $grid.masonry('layout');
+        });
+    </script> -->
+    <!-- <script type="application/ld+json">
+        {
+          "@context": "http://schema.org",
+          "@type": "WebSite",
+          "url": "http://wikidich.com/",
+          "potentialAction": {
+            "@type": "SearchAction",
+            "target": "http://wikidich.com/tim-kiem?q={search_term_string}&qs=1",
+            "query-input": "required name=search_term_string"
+          }
+        }
+        </script> -->
+    <!-- <script>
+        $(function () {
+
+            $('.side-nav').sidenav();
+            $('.modal-trigger').leanModal();
+        });
+        function isValidImageUrl(url, callback) {
+            $("<img>", {
+                src: url,
+                error: function () {
+                    callback($(this), url, false);
+                },
+                load: function () {
+                    callback($(this), url, true);
+                }
+            });
+        }
+
+        $('#btnAddLink').on({
+            'click': function () {
+                $("#groupMoreLinks").append($("#sample").clone().children().addClass("animated bounceInUp"));
+            }
+        });
+    </script> -->
+    <!-- <script>
+        (function (i, s, o, g, r, a, m) {
+            i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
+                (i[r].q = i[r].q || []).push(arguments)
+            }, i[r].l = 1 * new Date(); a = s.createElement(o),
+                m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
+        })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
+
+        ga('create', 'UA-85964585-1', 'auto');
+        ga('send', 'pageview');
+
+    </script>
+    <script>
+        if (window.loadAdType1) {
+            document.write("<script async src=\"https:\/\/aj1559.online\/ba298f04.js\"><\/script>");
+        }
+    </script> -->
+    <!-- <div class="material-tooltip" id="2b93b0e0-bca7-0e3d-e5be-66d35c779e28"
+        style="display: none; left: 691.85px; top: 308px; margin-top: 0px; margin-left: 0px; opacity: 0;"><span>Nắm kéo
+            để scroll</span>
+        <div class="backdrop"
+            style="top: 0px; left: 0px; margin-left: 61px; display: none; opacity: 0; transform: scale(1);"></div>
+    </div>
+    <div class="material-tooltip" id="0ae2cb79-1856-3c34-1a53-5bfd70346d9b"><span>【Trọng sinh】Sư phụ không tìm đường
+            chết</span>
+        <div class="backdrop" style="top: 0px; left: 0px;"></div>
+    </div>
+    <div class="material-tooltip" id="6418e7e7-87b0-8973-a56e-55652ea53db0"
+        style="opacity: 0; margin-top: 0px; margin-left: 0px; display: none;"><span>Bị ta tra quá nam chủ trọng sinh [
+            xuyên nhanh ]</span>
+        <div class="backdrop" style="top: 0px; left: 0px; opacity: 0; transform: scale(1); display: none;"></div>
+    </div>
+    <div class="material-tooltip" id="d4b94e2c-c3fc-7064-a364-f0c812c9fe36"><span> Chiêu Hề Cựu Thảo</span>
+        <div class="backdrop" style="top: 0px; left: 0px;"></div>
+    </div>
+    <div class="material-tooltip" id="9ec5f667-0934-0068-764c-2424e5964e13"><span>Nhị hôn</span>
+        <div class="backdrop" style="top: 0px; left: 0px;"></div>
+    </div>
+    <div class="material-tooltip" id="65bdf651-740d-99ab-2b2d-86ff3040c604"><span>Thứ dân</span>
+        <div class="backdrop" style="top: 0px; left: 0px;"></div>
+    </div>
+    <div class="material-tooltip" id="94abc36f-b6ae-5e46-3c5e-9dafc4ce51b2"><span>Thuốc dẫn của bạch nguyệt quang trọng
+            sinh</span>
+        <div class="backdrop" style="top: 0px; left: 0px;"></div>
+    </div>
+    <div class="material-tooltip" id="25775a41-b6ef-b561-96dd-47daeb90e79f"><span>Xuyên nhanh: Xuyên thành pháo hôi sau
+            nàng táp bạo</span>
+        <div class="backdrop" style="top: 0px; left: 0px;"></div>
+    </div>
+    <div class="material-tooltip" id="e0016115-a24a-c297-46d9-b81172b69b98"><span>Xem tướng niệm kinh, không phải kẻ lừa
+            đảo</span>
+        <div class="backdrop" style="top: 0px; left: 0px;"></div>
+    </div>
+    <div class="material-tooltip" id="1d388fd4-d5bb-db2a-9f8f-eba4a18acfce"><span>Tay ăn chơi xuyên qua lịch trình chi
+            tam ( xuyên nhanh )</span>
+        <div class="backdrop" style="top: 0px; left: 0px;"></div>
+    </div>
+    <div class="material-tooltip" id="b51d4f28-1a1d-09da-59cf-6170aad21bed"><span>Xuyên qua thập niên 60 tiểu thanh niên
+            trí thức</span>
+        <div class="backdrop" style="top: 0px; left: 0px;"></div>
+    </div>
+    <div class="material-tooltip" id="e5c19436-e7b4-1db8-97e2-d2eb90bcab34"><span>Xuyên nhanh: Nữ xứng, bình tĩnh một
+            chút</span>
+        <div class="backdrop" style="top: 0px; left: 0px;"></div>
+    </div>
+    <div class="material-tooltip" id="bc6fb9e2-8a61-9d8d-b931-c2c254cf281a"><span>Tà Vương truy thê / Một đời khuynh
+            thành / Lầm chọc yêu nghiệt Vương gia: Phế tài nghịch thiên tứ tiểu thư</span>
+        <div class="backdrop" style="top: 0px; left: 0px;"></div>
+    </div>
+    <div class="material-tooltip" id="4e3ae5b5-85ec-2882-5b05-d0e15ba2c22e"><span>Xuyên nhanh: Cứu mạng, nam chủ tất cả
+            đều tan vỡ!</span>
+        <div class="backdrop" style="top: 0px; left: 0px;"></div>
+    </div>
+    <div class="material-tooltip" id="003f1fb1-a7c3-b61a-11e8-9a155a4105d7"><span>Luân hồi nhạc viên</span>
+        <div class="backdrop" style="top: 0px; left: 0px;"></div>
+    </div>
+    <div class="material-tooltip" id="c931ff98-1831-8739-3d7b-86ad4a0f4fe2"><span>Xuyên nhanh: Nữ chủ giá lâm, nữ xứng
+            mau lui tán!</span>
+        <div class="backdrop" style="top: 0px; left: 0px;"></div>
+    </div>
+    <div class="material-tooltip" id="9dad6336-f801-d856-d2cc-8a66dc9d4e32"><span>Xuyên thành nam xứng ba ba</span>
+        <div class="backdrop" style="top: 0px; left: 0px;"></div>
+    </div>
+    <div class="material-tooltip" id="c727f76f-306c-3938-55cb-b7d14d16c74a"><span>Hán Hương</span>
+        <div class="backdrop" style="top: 0px; left: 0px;"></div>
+    </div>
+    <div class="material-tooltip" id="aeebee33-16c1-5686-7bcb-c1cc20693d47"><span>Xuyên thư sau ta biến đoàn sủng</span>
+        <div class="backdrop" style="top: 0px; left: 0px;"></div>
+    </div>
+    <div class="material-tooltip" id="d5b77713-01c4-e2e9-8cfe-fb1df530172d"><span>Vạn thú triều hoàng</span>
+        <div class="backdrop" style="top: 0px; left: 0px;"></div>
+    </div>
+    <div class="material-tooltip" id="5917b3f1-f047-fa2b-1728-e9a29ab1a03e"><span>Xuyên thành vạn nhân mê trong sách vạn
+            người ngại</span>
+        <div class="backdrop" style="top: 0px; left: 0px;"></div>
+    </div>
+    <div class="hiddendiv common"></div>
+    <div class="sidenav-overlay"></div>
+    <div class="drag-target"></div> -->
+
+
+</body>
+
+</html>
