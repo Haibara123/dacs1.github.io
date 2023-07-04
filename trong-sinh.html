@@ -1,15 +1,12 @@
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0">
-    <link rel="shortcut icon" href="/static/img/favicon.ico">
-    <meta name="description" content="Web dịch truyện tức thời miễn phí. Hãy tự chuyển ngữ bộ truyện mà bạn thích!">
-    <meta name="robots" content="noarchive">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-
-
-    <!-- CSS  -->
+<!--     <link rel="shortcut icon" href="/static/img/favicon.ico"> -->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link href="CSS/materialize-wiki.min.css" type="text/css" rel="stylesheet"
           media="screen,projection"/>
@@ -25,28 +22,22 @@
           media="screen,projection"/>
     <link href="CSS/base-0.1.0.min.css" type="text/css" rel="stylesheet"
           media="screen,projection"/>
-    <script type="text/javascript" async=""
-        src="https://www.googletagmanager.com/gtag/js?id=G-YCSZZTM0SE&amp;cx=c&amp;_slc=1"></script>
+
     <script async="" src="https://www.google-analytics.com/analytics.js"></script>
     <script src="JS/jquery-2.2.4.min.js"></script>
     <script>
         adType = 1;
     </script>
+    <title>Đọc Truyện Online</title>
 
-    <title>Đọc truyện online </title>
-    <link href="CSS/search-0.0.8.min.css" type="text/css" rel="stylesheet" media="screen,projection">
-
-
-
-
-
+    <link href="CSS/home-0.0.9.min.css" type="text/css" rel="stylesheet" media="screen,projection">
     <style>
         .text-blink-animation {
             animation-duration: 1000ms;
             animation-name: blink-animation;
             animation-iteration-count: infinite;
             animation-direction: alternate;
-            -webkit-animation: blink-animation 1000ms infinite;
+            /* -webkit-animation: blink-animation 1000ms infinite; */
         }
 
         @keyframes blink-animation {
@@ -73,41 +64,34 @@
 </head>
 
 <body>
-    <nav role="navigation">
-        <div class="nav-wrapper">
-            <ul class="hide-on-small-med-down">
+   <nav role="navigation">
+    <div class="nav-wrapper">
+        <ul class="hide-on-small-med-down">
 
-                <li><a href="index.html"
-                        style="height: 55px; padding-left: 0.5rem"><img src="img/logo.png" height="55px"
-                            style="vertical-align: middle;margin-bottom: 4px"></a></li>
+                     <li><a href="index.html" style="height: 55px; padding-left: 0.5rem"><img src="img/logo.png" height="55px" style="vertical-align: middle;margin-bottom: 4px"></a></li>
+        
+            <li class="right"><a href="dangki.html">Đăng ký</a></li>
+            <li class="right"><a href="dangnhap.html">Đăng nhập</a></li>
+        
+        </ul>
 
-                <li class="right"><a href="dangki.html">Đăng ký</a></li>
+        <ul class="hide-on-large-med-only">
+            <li><a href="/"style="height: 55px; padding-left: 0.5rem"><img src="logo.png" height="55px" style="vertical-align: middle;margin-bottom: 4px"></a></li>
+            
                 <li class="right"><a href="dangnhap.html" data-action="login">Đăng nhập</a></li>
+            
+        </ul>
 
-            </ul>
+    </div>
+</nav>
 
-            <ul class="hide-on-large-med-only">
-                <li><a href="index.html"
-                        style="height: 55px; padding-left: 0.5rem"><img src="img/logo.png" height="55px"
-                            style="vertical-align: middle;margin-bottom: 4px"></a></li>
-
-                <li class="right"><a href="dangnhap.html" data-action="login">Đăng nhập</a></li>
-
-            </ul>
-
-        </div>
-    </nav>
-
-
-    <ul id="nav-mobile" class="side-nav">
+    <!-- <ul id="nav-mobile" class="side-nav">
         <li><a href="index.html">Trang chủ</a></li>
         <li><a href="/chuong-moi">Chương mới</a></li>
+        
 
-
-    </ul>
-
-
-    <main>
+    </ul> -->
+  <main>
 
 
         <div class="container">
@@ -134,10 +118,7 @@
                 </a>
 
 
-                <a class="dropdown-button right btn-sort" data-hover="true" data-beloworigin="true"
-                    data-constrainwidth="false" data-activates="ddOptionSort" style="margin-right: 1rem">
-                    Xếp theo<i class="fa fa-sort-desc" aria-hidden="true"
-                        style="font-size: 1.2rem; margin: 0 0.4rem; vertical-align: top; line-height: 1.1rem"></i></a>
+                
                 <ul id="ddOptionSort" class="dropdown-content">
                     <li class="active"><a href="/tim-kiem?qs=2&amp;tag=5794f03dd7ced228f44191af&amp;vo=1">Đọc nhiều
                             nhất</a></li>
@@ -146,12 +127,7 @@
                     <li class=""><a href="/tim-kiem?qs=2&amp;tag=5794f03dd7ced228f44191af&amp;so=4&amp;vo=1">Mới
                             nhất</a></li>
                 </ul>
-                <div class="grid-box right" style="margin-right: 0.5rem">
-                    <a href="/tim-kiem?qs=2&amp;start=0&amp;tag=5794f03dd7ced228f44191af&amp;so=1" class="active"
-                        data-action="gridLayout"><i class="material-icons">view_module</i></a>
-                    <a href="/tim-kiem?qs=2&amp;start=0&amp;tag=5794f03dd7ced228f44191af&amp;so=1&amp;vo=2" class=""><i
-                            class="material-icons">view_list</i></a>
-                </div>
+                
 
             </div>
 
@@ -877,7 +853,6 @@
 
         </div>
     </main>
-
     <footer>
         <div class="container">
             <div class="footer-about">
@@ -903,7 +878,7 @@
                         <li><a href="#">Báo lỗi</a></li>
                         <li><a href="#">Bảo mật</a></li>
                         <li><a href="#">Điều lệ</a></li>
-                        <li><a href="../lienhe.html">Liên hệ</a></li>
+                        <li><a href="lienhe.html">Liên hệ</a></li>
                     </ul>
                 </div>
                 <div class="contact-col">
@@ -921,9 +896,9 @@
 
         </div>
     </footer>
+  
 
 
-   
 </body>
 
 </html>
