@@ -135,13 +135,13 @@
                         </p>
 
                         <p style="margin: 0.9rem 0">Hán Việt: <a href="#">Tiểu thái giám</a></p>
-                        <p style="margin: 0.9rem 0">Tác giả: <a href="tac-gia.html">Sắt Nhận</a></p>
+                        <p style="margin: 0.9rem 0">Tác giả: <a href="#">Sắt Nhận</a></p>
                         <p style="margin: 0.9rem 0">Tình trạng: <a href="#">Hoàn thành</a></p>
                         
                             <p style="margin: 0.9rem 0">Mới nhất: <a href="chuong3.html">3. Kết cục</a></p>
                         
                         <p style="margin: 0.9rem 0">Thời gian đổi mới: <span class="">16-12-2022</span></p>
-                        <p style="margin: 0.9rem 0">Cảm ơn: <span class="">18 lần</span></p>
+<!--                         <p style="margin: 0.9rem 0">Cảm ơn: <span class="">18 lần</span></p> -->
 
 
 
@@ -152,7 +152,7 @@
             <div class="book-desc">
                 <p>Thể loại: <span style="color: #01bed6">
                     <a href="#">Nguyên sang</a>,
-                    <a href="../ngontinh.html">Ngôn tình</a>,
+                    <a href="#">Ngôn tình</a>,
                     
                         
                         <a href="#">Cổ đại</a>
@@ -250,17 +250,16 @@
 </div>
 
 
-    <link href="CSS/comment-board-0.0.2.min.css" type="text/css" rel="stylesheet"
+ <link href=../CSS/comment-board-0.0.2.min.css type="text/css" rel="stylesheet"
           media="screen,projection"/>
 
 
 
 <div id="commentBoard" style="clear: both">
     <div class="comment-title">
-        
-        <span style="font-size: 1.37rem; font-weight: bold; color: #555555">Bình luận</span>
+<!--         <i class="fa fa-commenting" aria-hidden="true" style="font-size: 2rem; margin-right: 0.7rem; color: #f7941d; text-shadow: 2px 2px #c6c6c6;"></i> -->
+        <span style="font-size: 1.37rem; font-weight: bold; color: #555555">Bình luận</span> 
     </div>
-
     <div class="comment-adx-wrapper">
         <div class="comment-element-list">
             <div class="comment-element">
@@ -274,7 +273,7 @@
                 <div class="comment-content">
                     <div class="comment-textarea-box">
                         <form>
-                            <input type="hidden" name="bookId" value="5a33f75aef21ec1b3710852d"/>
+                            <input type="hidden" name="bookId" value="619180c054b8086c95447448"/>
                             
                             <textarea id="txtComment" class="comment-textarea" name="message"
                                   autocomplete="off" autocorrect="off" autocapitalize="off"
@@ -286,13 +285,33 @@
                     </div>
                 </div>
             </div>
-            <div id="commentList"></div>
+            <div id="commentList">
+            </div>
         </div>
+
 
     </div>
 
-   
-    
+    <div id="sampleComment" class="hide">
+        <div class="comment-element">
+            <div class="comment-avatar-box">
+                <div class="center-align comment-avatar">
+                    <a href="#!" class="avatar-link">
+                        <img src="../img/member1.jpg" class="avatar-img"/>
+                    </a>
+                </div>
+            </div>
+            <div class="comment-content">
+                <div class="comment-content-box">
+                    <div class="comment-username">
+                        <a href="" class="username-link">
+                            
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
     <div id="sampleReply" class="hide">
         <div class="comment-element comment-reply comment-dialog">
             <div class="comment-avatar-box">
@@ -305,7 +324,7 @@
             <div class="comment-content">
                 <div class="comment-textarea-box">
                     <form>
-                        <input type="hidden" name="bookId" value="5a33f75aef21ec1b3710852d"/>
+                        <input type="hidden" name="bookId" value="619180c054b8086c95447448"/>
                         
                         <input type="hidden" name="parentId"/>
                         <textarea id="txtComment" class="comment-textarea" name="message"
@@ -343,48 +362,7 @@
             </div>
         </div>
     </div>
-</div>
-<!-- <script src="../JS/tinymce.min.js"></script>
 
-<script src="../JS/readmore.min.js"></script>
-<script>
-    var commentOrder = "newest";
-    var bookId = "5a33f75aef21ec1b3710852d";
-    var chapterId = null;
-    var userslug = "";
-    var hasDeleteCommentPermission = false;
-</script>
-
-
- 
-    <div id="mdReportHistory" class="modal modal-fixed-footer">
-        <div class="modal-content mCustomScrollbar" data-mcs-theme="minimal-dark">
-        </div>
-        <div class="modal-footer">
-            <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat" style="text-transform: none;">Đóng</a>
-        </div>
-    </div>
-    
-
-    <div id="mdDelBookConfirm" class="modal" style="width: 500px">
-        <div class="modal-content">
-            <p>Bạn có chắc muốn xóa truyện này?</p>
-            <form>
-                <div>
-                    <textarea class="materialize-textarea validate"
-                              name="reason" placeholder="Lý do xóa truyện"
-                              length="1000" autocomplete="off" autocorrect="off" autocapitalize="off"
-                              spellcheck="false" style="max-height: 200px; overflow-y: scroll"></textarea>
-                </div>
-            </form>
-        </div>
-        <div class="modal-footer">
-          <a href="#!" class="modal-action modal-close waves-effect waves-green btn" style="margin-right: 0.5rem">Hủy bỏ</a>
-          <a href="#!" class="modal-action waves-effect waves-green btn btn-confirm" data-action="confirmDelBook" style="margin-right: 1rem">Đồng ý</a>
-        </div>
-    </div>
-
-    </div> -->
 </main>
 
 <footer>
@@ -431,114 +409,5 @@
 
 <!--  Scripts-->
 
-
-
-<!-- <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script src=/static/js/utils/materialize-wiki.min.js></script>
-<script src=/static/js/utils/materialize-sidenav.min.js></script>
-<script src=/static/js/utils/jquery.mCustomScrollbar-3.1.5.min.js></script>
-<script src=/static/js/utils/js.cookie-2.2.1.min.js></script>
-<script src=/static/js/common/translator_types-0.0.1.min.js></script>
-<script src=/static/js/wiki/base-0.0.8.min.js></script>
-
-    <script src=/static/js/utils/canvas-to-blob.min.js></script>
-    <script src=/static/js/wiki/get-book-0.2.5.min.js></script>
-    <script>
-        var bookId = "5a33f75aef21ec1b3710852d";
-        function fuzzySign(text) {
-            return text.substring(3) + text.substring(0, 3);
-        }
-        var signKey = "b38bf7b65b0693d20013660454b97e65abb7c0a91b627d2ca364a25a30cec5cf385fef6dc2fcda1bfe251241126b2fb6";
-        loadBookIndex(0, 501, false);
-    </script>
-
-
-    <script src=/static/js/utils/clipboard.min.js></script>
-    <script src=/static/js/wiki/edit-name-0.0.7.min.js></script>
-    <script src=/static/js/wiki/comment-board-0.0.7.min.js></script>
-    <script src=/static/js/wiki/book-admin-0.0.5.min.js></script>
-    <script src=/static/js/wiki/book-list.min.js></script>
-    <script>
-        var isSuperAdmin = false;
-        loadComment("5a33f75aef21ec1b3710852d", null, 0);
-        updateBookStats(bookId, null, 1, 1);
-        $(document).ready(function(){
-          $('.slider').slider();
-        });
-
-        var username = null;
-
-        new Clipboard('.btn-copy', {
-            text: function (trigger) {
-                return getListName();
-            }
-        });
-
-        $('.book-desc-detail').readmore({
-            collapsedHeight: 750,
-            moreLink:'<a class="orange-text" href="#">Xem thêm</a>',
-            lessLink:'<a class="orange-text" href="#">Thu lại</a>'
-        });
-    </script>
-
-
-
-
-    <div id="fb-root"></div>
-    <script>(function (d, s, id) {
-        var js, fjs = d.getElementsByTagName(s)[0];
-        if (d.getElementById(id)) return;
-        js = d.createElement(s);
-        js.id = id;
-        js.src = "//connect.facebook.net/vi_VN/sdk.js#xfbml=1&version=v2.6&appId=1520963528212555";
-        fjs.parentNode.insertBefore(js, fjs);
-    }(document, 'script', 'facebook-jssdk'));</script>
-    <script src="https://apis.google.com/js/platform.js" async defer></script>
-
-
-<script>
-    $(function () {
-
-        $('.side-nav').sidenav();
-        $('.modal-trigger').leanModal();
-    });
-    function isValidImageUrl(url, callback) {
-        $("<img>", {
-            src: url,
-            error: function () {
-                callback($(this), url, false);
-            },
-            load: function () {
-                callback($(this), url, true);
-            }
-        });
-    }
-
-    $('#btnAddLink').on({
-        'click': function () {
-            $("#groupMoreLinks").append($("#sample").clone().children().addClass("animated bounceInUp"));
-        }
-    });
-</script>
-<script>
-  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-
-  ga('create', 'UA-85964585-1', 'auto');
-  ga('send', 'pageview');
-
-</script>
-
-
-
-
-
-
-<script>
-    if (window.loadAdType1) {
-        document.write("<script async src=\"https:\/\/aj1559.online\/ba298f04.js\"><\/script>");
-    }
-</script> -->
 </body>
 </html>
